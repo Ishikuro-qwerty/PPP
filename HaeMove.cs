@@ -5,43 +5,43 @@ using UnityEngine;
 public class HaeMove : MonoBehaviour
 {
     [SerializeField]
-    public float moveSpeed = 5f; // ˆÚ“®‘¬“x
+    public float moveSpeed = 5f; // ç§»å‹•é€Ÿåº¦
     [SerializeField]
-    public float rotationSpeed = 180f; // ‰ñ“]‘¬“x
+    public float rotationSpeed = 180f; // å›è»¢é€Ÿåº¦
     [SerializeField]
     private int clicked = 0;
 
-    private int clickCount = 0; // ƒNƒŠƒbƒN‚³‚ê‚½‰ñ”
+    private int clickCount = 0; // ã‚¯ãƒªãƒƒã‚¯ã•ã‚ŒãŸå›æ•°
     void Update()
     {
-        // ƒ‰ƒ“ƒ_ƒ€‚È•ûŒü‚ÉˆÚ“®
+        // ãƒ©ãƒ³ãƒ€ãƒ ãªæ–¹å‘ã«ç§»å‹•
         MoveRandomly();
 
-        // ƒ‰ƒ“ƒ_ƒ€‚È•ûŒü‚É‰ñ“]
+        // ãƒ©ãƒ³ãƒ€ãƒ ãªæ–¹å‘ã«å›è»¢
         RotateRandomly();
 
     }
 
     void MoveRandomly()
     {
-        // ƒ‰ƒ“ƒ_ƒ€‚È•ûŒü‚Éi‚ŞƒxƒNƒgƒ‹‚ğ¶¬
+        // ãƒ©ãƒ³ãƒ€ãƒ ãªæ–¹å‘ã«é€²ã‚€ãƒ™ã‚¯ãƒˆãƒ«ã‚’ç”Ÿæˆ
         Vector3 randomDirection = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0f).normalized;
 
-        // Œ»İ‚ÌˆÊ’u‚©‚çƒ‰ƒ“ƒ_ƒ€‚È•ûŒü‚ÉˆÚ“®
+        // ç¾åœ¨ã®ä½ç½®ã‹ã‚‰ãƒ©ãƒ³ãƒ€ãƒ ãªæ–¹å‘ã«ç§»å‹•
         transform.Translate(randomDirection * moveSpeed * Time.deltaTime);
     }
 
     void RotateRandomly()
     {
-        // ƒ‰ƒ“ƒ_ƒ€‚ÈŠp“x‚Å‰ñ“]
+        // ãƒ©ãƒ³ãƒ€ãƒ ãªè§’åº¦ã§å›è»¢
         transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
     }
 
     public void ClickDestroy()
     {
-        clickCount++; // ƒNƒŠƒbƒN‰ñ”‚ğ‘‚â‚·
+        clickCount++; // ã‚¯ãƒªãƒƒã‚¯å›æ•°ã‚’å¢—ã‚„ã™
 
-        // 3‰ñˆÈãƒNƒŠƒbƒN‚³‚ê‚½‚çƒIƒuƒWƒFƒNƒg‚ğ”j‰ó
+        // nå›ä»¥ä¸Šå›ä»¥ä¸Šã‚¯ãƒªãƒƒã‚¯ã•ã‚ŒãŸã‚‰ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ç ´å£Š
         if (clickCount == clicked)
         {
             Destroy(gameObject);
