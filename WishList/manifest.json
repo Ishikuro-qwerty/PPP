@@ -1,0 +1,20 @@
+{
+    "name": "ウィッシュリスト",
+    "description": "気になる商品を登録",
+    "version": "1.0.0",
+    "icons": {
+      "16": "gameverce.png",
+      "48": "gameverce.png",
+      "128": "gameverce.png"
+    },
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab",
+        "storage"
+      ], 
+  
+    "action": {
+      "default_popup": "popup.html"
+    }
+    
+}

@@ -1,0 +1,43 @@
+/* スタイルを適用したい要素に対するルール */
+#registeredItems {
+    background-color: #5b515153;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* popup.css */
+body {
+    width: 300px; /* ウィンドウの幅を設定 */
+    max-height: 100px; /* ウィンドウの最大高さを設定し、超えた場合にスクロールバーを表示 */
+    overflow-y: auto; /* 縦方向のスクロールバーを表示 */
+    margin: 0; /* 余白をゼロに設定 */
+    padding: 10px; /* 内側の余白を設定 */
+    font-family: Arial, sans-serif; /* フォントファミリーを指定 */
+}
+
+
+/* リストアイテムに対するスタイルルール */
+li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* リンクに対するスタイルルール */
+a {
+    color: #0966e9;
+    text-decoration: none;
+}
+
+/* リンクにホバーエフェクトを追加 */
+a:hover {
+    text-decoration: underline;
+}

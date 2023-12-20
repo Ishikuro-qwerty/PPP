@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登録情報</title>
+</head>
+<body>
+    <h1>登録された情報</h1>
+    <ul id="registeredItems">
+        <!-- 登録情報がここに表示される -->
+    </ul>    
+    
+    <h2>新しいデータを登録</h2>
+<form id="registrationForm">
+    <label for="url">URL:</label>
+    <input type="text" id="url" name="url" required><br>
+
+    <label for="item">アイテム:</label>
+    <input type="text" id="item" name="item" required><br>
+
+    <input type="submit" value="登録">
+</form>
+
+
+    <!-- スクリプトファイルの読み込み -->
+    <script src="popup.js"></script>
+</body>
+</html>
